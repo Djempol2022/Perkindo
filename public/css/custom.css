@@ -1,0 +1,123 @@
+:root {
+    --black-color: #2b2b2b;
+    --bg-color: #eef2fc;
+    --primary-color: #3069ee;
+    --grey-color: #f0f0f0;
+    --secondary-color: #ff802d;
+    --dark-grey-color: #9e9e9e;
+}
+.mt-100 {
+    margin-top: 100px;
+}
+/* VARIABEL WARNA */
+.bg-main {
+    background-color: var(--bg-color) !important;
+}
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+.bg-secondary {
+    background-color: var(--secondary-color) !important;
+}
+.bg-grey {
+    background-color: var(--grey-color) !important;
+}
+.bg-dark-grey {
+    background-color: var(--dark-grey-color) !important;
+}
+.bg-black {
+    background-color: var(--black-color) !important;
+}
+.text-secondary {
+    color: var(--secondary-color) !important;
+}
+.text-dark-grey {
+    color: var(--dark-grey-color) !important;
+}
+
+/* NAVBAR */
+.nav-logo {
+    background-color: #ffffff00;
+    padding: 24px 14px;
+    transition: 0.2s;
+    border-radius: 100%;
+}
+.nav-logo:hover {
+    background-color: white;
+}
+.nav-logo img {
+    width: 90px;
+    height: auto;
+}
+.nav-link {
+    color: white !important;
+}
+.nav-link:hover {
+    color: var(--black-color) !important;
+}
+.nav-link.active {
+    color: var(--secondary-color) !important;
+}
+.nav-grad-beranda {
+    background-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.372)
+    );
+    max-height: 700px;
+    min-height: 600px;
+    margin-top: -5px;
+}
+.bg-logo {
+    background-color: #ffffff;
+    padding: 42px 22px;
+    border-radius: 100%;
+}
+
+/* BUTTON */
+.btn-rounded {
+    border-radius: 100px;
+}
+.btn-secondary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--secondary-color);
+    --bs-btn-border-color: var(--secondary-color);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #e5742a;
+    --bs-btn-hover-border-color: #e5742a;
+    --bs-btn-focus-shadow-rgb: 130, 138, 145;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #e5742a;
+    --bs-btn-active-border-color: #e5742a;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #e19969;
+    --bs-btn-disabled-border-color: #e19969;
+}
+
+/* BERANDA */
+.hero-section {
+    max-width: 800px;
+    min-width: 300px;
+    height: auto;
+}
+.info-pengguna {
+    max-width: 250px;
+    width: 19%;
+}
+@media (max-width: 960px) {
+    .hero-section {
+        width: 70%;
+    }
+    .nav-grad-beranda {
+        height: 70vi;
+    }
+}
+@media (max-width: 620px) {
+    .info-pengguna {
+        width: 100%;
+    }
+}
+.line-oren {
+    border-bottom: 5px solid var(--secondary-color);
+}
