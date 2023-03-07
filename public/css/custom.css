@@ -6,6 +6,25 @@
     --secondary-color: #ff802d;
     --dark-grey-color: #9e9e9e;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f100;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 .mt-100 {
     margin-top: 100px;
 }
@@ -31,22 +50,34 @@
 .text-secondary {
     color: var(--secondary-color) !important;
 }
+.text-primary {
+    color: var(--primary-color) !important;
+}
 .text-dark-grey {
     color: var(--dark-grey-color) !important;
+}
+.img-full {
+    width: 100%;
+    height: auto;
+}
+.carousel-galeri {
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
 /* NAVBAR */
 .nav-logo {
     background-color: #ffffff00;
-    padding: 24px 14px;
+    /* padding: 24px 14px; */
+    padding: 10px 14px;
     transition: 0.2s;
     border-radius: 100%;
 }
-.nav-logo:hover {
+/* .nav-logo:hover {
     background-color: white;
-}
+} */
 .nav-logo img {
-    width: 90px;
+    width: 70px;
     height: auto;
 }
 .nav-link {
@@ -94,16 +125,135 @@
     --bs-btn-disabled-bg: #e19969;
     --bs-btn-disabled-border-color: #e19969;
 }
+.tab-link {
+    color: var(--primary-color) !important;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out;
+    padding: 1rem 0.3rem;
+    border-radius: 100px;
+}
+.tab-link:hover,
+.tab-link.active {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
 
 /* BERANDA */
 .hero-section {
     max-width: 800px;
     min-width: 300px;
     height: auto;
+    border-radius: 20px;
+    object-fit: cover;
 }
 .info-pengguna {
     max-width: 250px;
     width: 19%;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out;
+}
+.info-pengguna:hover {
+    background-color: var(--primary-color);
+    background-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.372)
+    );
+    color: white !important;
+}
+.info-pengguna:hover > div > span {
+    color: white !important;
+}
+.line-oren {
+    border-bottom: 5px solid var(--secondary-color);
+}
+.border-none {
+    border: none !important;
+}
+.col-45 {
+    width: 30.4% !important;
+}
+.col-55 {
+    width: 48.75% !important;
+}
+.card-beranda {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+.berita-terbaru {
+    min-width: 250px;
+}
+.line-footer {
+    border-bottom: 10px solid var(--primary-color);
+}
+.gambar-galeri {
+    margin-right: 3% !important;
+    max-width: 250px;
+}
+.arrow-up {
+    padding: 9px 12px;
+    background-color: var(--secondary-color);
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    border-radius: 100%;
+}
+.whatsapp {
+    padding: 9px 12px;
+    background-color: var(--secondary-color);
+    position: fixed;
+    bottom: 190px;
+    left: 40px;
+    border-radius: 100%;
+}
+.email {
+    padding: 9px 12px;
+    background-color: var(--secondary-color);
+    position: fixed;
+    bottom: 140px;
+    left: 40px;
+    border-radius: 100%;
+}
+.facebook {
+    padding: 9px 12px;
+    background-color: var(--secondary-color);
+    position: fixed;
+    bottom: 90px;
+    left: 40px;
+    border-radius: 100%;
+}
+.instagram {
+    padding: 9px 12px;
+    background-color: var(--secondary-color);
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    border-radius: 100%;
+}
+@media (max-width: 1308px) {
+    .card-beranda {
+        height: 150px;
+    }
+    .berita-ke-3 {
+        display: none;
+        visibility: hidden;
+    }
+}
+@media (max-width: 1151px) {
+    .agenda {
+        width: 100% !important;
+    }
+    .info-lelang-2 {
+        visibility: hidden;
+        display: none;
+    }
+    .info-lelang {
+        width: 100% !important;
+    }
 }
 @media (max-width: 960px) {
     .hero-section {
@@ -113,11 +263,69 @@
         height: 70vi;
     }
 }
+@media (max-width: 995px) {
+    .main-navbar {
+        padding: 0 !important;
+    }
+    .navbar-mobile {
+        padding-bottom: 35px;
+    }
+    .img-tentang {
+        visibility: hidden;
+        width: 0;
+        display: none;
+    }
+    .btn-tentang {
+        justify-content: center !important;
+        display: flex;
+    }
+    .tentang-kami {
+        margin: 0 !important;
+        padding: 0px 9%;
+    }
+}
 @media (max-width: 620px) {
     .info-pengguna {
         width: 100%;
     }
+    .berita-ke-2 {
+        display: none;
+        visibility: hidden;
+    }
 }
-.line-oren {
-    border-bottom: 5px solid var(--secondary-color);
+@media (max-width: 575px) {
+    .gambar-galeri {
+        order: 6;
+        margin: 0 !important;
+    }
+    .teks-galeri {
+        padding: 0 9% !important;
+        margin: 0 !important;
+    }
+}
+@media (max-width: 460px) {
+    .agenda {
+        padding: 10px 15px !important;
+    }
+    .icon-lelang {
+        width: 25%;
+    }
+    .info-lelang {
+        padding: 20px 0 !important;
+    }
+    .p-footer {
+        padding: 1rem !important;
+    }
+}
+@media (max-width: 382px) {
+    .agenda-ke-2 {
+        visibility: hidden;
+        display: none;
+    }
+    .icon-agenda {
+        width: 25%;
+    }
+    .agenda {
+        padding: 20px 0 !important;
+    }
 }

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md bg-primary px-5 py-1">
+<nav class="navbar navbar-expand-lg bg-primary px-5 py-1 main-navbar fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand nav-logo col-auto" href="#!" onclick="redirect('{{ route('Beranda') }}')"><img
                 src="/img/logo.png" alt=""></a>
@@ -6,7 +6,7 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse navbar-mobile" id="navbarSupportedContent">
             <ul class="col d-flex justify-content-center navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item mx-1">
                     <a class="nav-link {{ request()->routeIs('Beranda*') ? 'active' : '' }} " aria-current="page"
@@ -48,3 +48,18 @@
         </div>
     </div>
 </nav>
+<div class="arrow-up d-flex z-3">
+    <a href="#" class="rounded-circle stretched-link"><i class="bi bi-arrow-up-short text-white"></i></a>
+</div>
+<div class="whatsapp d-flex z-3">
+    <a href="#" class="rounded-circle stretched-link"><i class="bi bi-whatsapp text-white"></i></a>
+</div>
+<div class="email d-flex z-3">
+    <a href="#" class="rounded-circle stretched-link"><i class="bi bi-envelope text-white"></i></a>
+</div>
+<div class="facebook d-flex z-3">
+    <a href="#" class="rounded-circle stretched-link"><i class="bi bi-facebook text-white"></i></a>
+</div>
+<div class="instagram d-flex z-3">
+    <a href="#" class="rounded-circle stretched-link"><i class="bi bi-instagram text-white"></i></a>
+</div>
