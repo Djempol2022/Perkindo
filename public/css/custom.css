@@ -10,6 +10,18 @@
 ::-webkit-scrollbar {
     width: 10px;
 }
+.paginate svg {
+    max-width: 25px !important;
+}
+.paginate p {
+    margin-top: 20px !important;
+}
+.paginate a {
+    text-decoration: none !important;
+}
+.grid-gap-1 {
+    grid-row-gap: 1rem;
+}
 
 /* Track */
 ::-webkit-scrollbar-track {
@@ -27,6 +39,12 @@
 }
 .mt-100 {
     margin-top: 100px;
+}
+.section {
+    padding: 0 9vi !important;
+}
+.fs-small {
+    font-size: 1.1vi !important;
 }
 /* VARIABEL WARNA */
 .bg-main {
@@ -89,22 +107,21 @@
 .nav-link.active {
     color: var(--secondary-color) !important;
 }
-.nav-grad-beranda {
-    background-image: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0.372)
-    );
-    max-height: 700px;
-    min-height: 600px;
-    margin-top: -5px;
+.dropdown-item {
+    color: black;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out;
 }
-.bg-logo {
-    background-color: #ffffff;
-    padding: 42px 22px;
-    border-radius: 100%;
+.dropdown-item:hover {
+    color: white;
+    background-color: var(--primary-color);
 }
-
+.text-justify {
+    text-align: justify !important;
+}
+.fw-regular {
+    font-weight: 500;
+}
 /* BUTTON */
 .btn-rounded {
     border-radius: 100px;
@@ -125,21 +142,36 @@
     --bs-btn-disabled-bg: #e19969;
     --bs-btn-disabled-border-color: #e19969;
 }
-.tab-link {
-    color: var(--primary-color) !important;
-    text-decoration: none;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out;
-    padding: 1rem 0.3rem;
-    border-radius: 100px;
+.nav-grad {
+    background-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.372)
+    );
+    max-height: 575px;
+    height: 570px;
+    min-height: 350px;
+    margin-top: 48px;
 }
-.tab-link:hover,
-.tab-link.active {
-    background-color: var(--primary-color) !important;
-    color: white !important;
+.rounded-circle {
+    border-radius: 100%;
 }
-
 /* BERANDA */
+.nav-grad-beranda {
+    background-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.372)
+    );
+    max-height: 700px;
+    min-height: 600px;
+    margin-top: 48px;
+}
+.bg-logo {
+    background-color: #ffffff;
+    padding: 42px 22px;
+    border-radius: 100%;
+}
 .hero-section {
     max-width: 800px;
     min-width: 300px;
@@ -168,6 +200,19 @@
 .line-oren {
     border-bottom: 5px solid var(--secondary-color);
 }
+.tab-link {
+    color: var(--primary-color) !important;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out;
+    padding: 1rem 0.3rem;
+    border-radius: 100px;
+}
+.tab-link:hover,
+.tab-link.active {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
 .border-none {
     border: none !important;
 }
@@ -184,7 +229,7 @@
     object-position: center;
     border-radius: 10px;
 }
-.berita-terbaru {
+.berita-terbaru-beranda {
     min-width: 250px;
 }
 .line-footer {
@@ -327,5 +372,100 @@
     }
     .agenda {
         padding: 20px 0 !important;
+    }
+}
+
+/* PROFIL */
+.img-profil {
+    object-fit: cover;
+    object-position: center;
+}
+.border-secondary {
+    border: 5px solid var(--secondary-color) !important;
+}
+#more {
+    display: none;
+}
+.max-foto-profil {
+    max-width: 250px;
+}
+.vector-img {
+    max-width: 350px;
+}
+.foto-visi {
+    max-width: 550px;
+}
+@media (max-width: 991px) {
+    .judul-header {
+        width: 90% !important;
+    }
+    .vector-img {
+        display: none;
+    }
+    .foto-visi {
+        display: none !important;
+    }
+    .visi {
+        margin-top: 0 !important;
+    }
+    .nav-grad {
+        height: 30%;
+    }
+}
+@media (max-width: 547px) {
+    .max-foto-profil {
+        max-width: 150px;
+    }
+}
+
+/* BERITA */
+.berita {
+    animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.berita-terbaru {
+    min-width: 0;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    max-height: 350px;
+    height: 350px;
+    border-radius: 15px;
+}
+.isi-berita {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    border-radius: 15px;
+    height: 350px;
+}
+
+.iklan-berita img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+@media (max-width: 991px) {
+    .berita-terbaru {
+        height: 30vi;
+    }
+}
+@media (max-width: 767px) {
+    .iklan-berita {
+        order: 1 !important;
+        margin-bottom: 5rem;
+        height: 250px;
+        padding: 0 1rem !important;
+    }
+    .col-berita {
+        order: 2 !important;
     }
 }

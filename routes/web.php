@@ -19,6 +19,7 @@ Route::controller(BerandaController::class)->group(function () {
     Route::get('/', 'beranda')->name('Beranda');
     Route::get('profil', 'profil')->name('Profil');
     Route::get('berita', 'berita')->name('Galeri.berita');
+    Route::get('berita/{slug}', 'isi_berita')->name('Galeri.berita.isi');
     Route::get('agenda', 'agenda')->name('Galeri.agenda');
     Route::get('galeri-kegiatan', 'galeri')->name('Galeri.kegiatan');
     Route::get('layanan', 'layanan')->name('Layanan');

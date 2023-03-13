@@ -1,6 +1,6 @@
 @extends('_layout.__main-layout')
 @section('section-umum')
-    <div class="col bg-primary nav-grad-beranda" style="margin-top: 70px">
+    <div class="col bg-primary nav-grad-beranda">
         {{-- HEADER BERANDA --}}
         <div class="d-flex justify-content-center pt-3">
             <div class="col-auto">
@@ -66,11 +66,14 @@
                 <div class="mb-3">
                     <h4 class="fw-semibold">Ketahui lebih lengkap mengenai PERKINDO Kalimantan Barat</h4>
                 </div>
-                <small class="fw-semibold">Persatuan Konsultan Indonesia atau yang disingkat PERKINDO adalah Suatu Asosiasi
-                    Perusahaan Konsultan
-                    Perencana dan Pengawas Konstruksi, yang telah menjadi Kelompok Unsur Lembaga Pengembangan Jasa
-                    Konstruksi (LPJK) sesuai dengan Keputusan Menteri Pekerjaan Umum dan Perumahan Rakyat (Menteri PUPR)
-                    Nomor : 471/KTPS/M/2016.</small>
+                <div class="text-justify">
+                    <small class="fw-semibold">Persatuan Konsultan Indonesia atau yang disingkat PERKINDO adalah
+                        Suatu Asosiasi
+                        Perusahaan Konsultan
+                        Perencana dan Pengawas Konstruksi, yang telah menjadi Kelompok Unsur Lembaga Pengembangan Jasa
+                        Konstruksi (LPJK) sesuai dengan Keputusan Menteri Pekerjaan Umum dan Perumahan Rakyat (Menteri PUPR)
+                        Nomor : 471/KTPS/M/2016.</small>
+                </div>
                 <div class="mt-5 btn-tentang">
                     <button type="button" class="btn btn-primary btn-rounded px-5">Selengkapnya</button>
                 </div>
@@ -115,7 +118,7 @@
                         <div class="tab-pane fade show active" id="menu-berita" role="tabpanel" aria-labelledby="berita"
                             tabindex="0">
                             <div class="row justify-content-center gap-5 mt-5">
-                                <div class="col-45 card border-none berita-terbaru">
+                                <div class="col-45 card border-none berita-terbaru-beranda">
                                     <div class="m-3 mb-0">
                                         <img src="/img/contoh-card.png" class="card-beranda">
                                     </div>
@@ -125,7 +128,7 @@
                                         <a href="#!" class="stretched-link"></a>
                                     </div>
                                 </div>
-                                <div class="col-45 card border-none berita-terbaru berita-ke-2">
+                                <div class="col-45 card border-none berita-terbaru-beranda berita-ke-2">
                                     <div class="m-3 mb-0">
                                         <img src="/img/contoh-card.png" class="card-beranda">
                                     </div>
@@ -135,7 +138,7 @@
                                         <a href="#!" class="stretched-link"></a>
                                     </div>
                                 </div>
-                                <div class="col-45 card border-none berita-terbaru berita-ke-3">
+                                <div class="col-45 card border-none berita-terbaru-beranda berita-ke-3">
                                     <div class="m-3 mb-0">
                                         <img src="/img/contoh-card.png" class="card-beranda">
                                     </div>

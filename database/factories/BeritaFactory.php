@@ -1,26 +1,27 @@
 <?php
 
-namespace Database\Seeders;
+namespace Database\Factories;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-use App\Models\Berita;
-use Illuminate\Database\Seeder;
-
-class DatabaseSeeder extends Seeder
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Berita>
+ */
+class BeritaFactory extends Factory
 {
     /**
-     * Seed the application's database.
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
      */
-    public function run(): void
+    public function definition(): array
     {
-        // \App\Models\User::factory(10)->create();
-        Berita::factory(10)->create();
-        Berita::factory()->create([
+        static $no = 1;
+        return [
             'judul' => 'Ini contoh',
             'isi' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur laboriosam fugiat molestias enim ut qui nam quas aliquid iure! Repudiandae fugiat minima incidunt culpa sint rem, nisi nulla optio distinctio nostrum dicta eligendi consectetur? Sed sit assumenda similique nesciunt repellendus! Natus, ipsum repellendus. Totam deleniti cum, dolorem repellendus similique eligendi.',
             'foto' => '/img/hero_image.png',
-            'slug' => 'ini-contoh'
-        ]);
+            'slug' => 'ini-contoh-' . $no++
+        ];
     }
 }

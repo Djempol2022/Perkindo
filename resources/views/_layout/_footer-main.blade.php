@@ -8,13 +8,13 @@
     <div class="col-lg-3 p-5 p-footer">
         <h5 class="fw-semibold pb-2">Tautan Cepat</h5>
         <div class="mb-2 fw-medium">
-            <a href="#!" class="link-dark text-decoration-none">Beranda</a>
+            <a href="{{ route('Beranda') }}" class="link-dark text-decoration-none">Beranda</a>
         </div>
         <div class="mb-2 fw-medium">
-            <a href="#!" class="link-dark text-decoration-none">Anggota</a>
+            <a href="{{ route('Anggota') }}" class="link-dark text-decoration-none">Anggota</a>
         </div>
         <div class="mb-2 fw-medium">
-            <a href="#!" class="link-dark text-decoration-none">Galeri</a>
+            <a href="{{ route('Galeri.kegiatan') }}" class="link-dark text-decoration-none">Galeri</a>
         </div>
         <div class="mb-2 fw-medium">
             <a href="#!" class="link-dark text-decoration-none">FAQ</a>
