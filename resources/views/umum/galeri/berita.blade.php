@@ -23,10 +23,13 @@
                 <h4 class="fw-bolder">{{ $berita_baru->judul }}</h4>
             </div>
             <div class="col-12">
-                <span class="fw-regular">{{ date('d F Y', strtotime($berita_baru->created_at)) }}</span>
+                <span class="fw-regular">
+                    {{ Carbon\Carbon::parse($berita_baru->created_at)->translatedFormat('d F Y') }}
+                </span>
             </div>
             <div class="col-12 mb-4 text-end">
-                <a href="{{ $berita_baru->slug }}" class="link-primary text-decoration-none fw-regular stretched-link">
+                <a href="{{ route('Galeri.berita.isi', $berita_baru->slug) }}"
+                    class="link-primary text-decoration-none fw-regular stretched-link">
                     Selengkapnya <i class="bi bi-caret-right-fill"></i>
                 </a>
             </div>
@@ -121,7 +124,7 @@
                 }).done(function(data) {
                     $('.berita-page').html(data);
                 }).fail(function() {
-                    alert('Articles could not be loaded.');
+                    alert('Berita tidak dapat dibuka !.');
                 });
             }
         });

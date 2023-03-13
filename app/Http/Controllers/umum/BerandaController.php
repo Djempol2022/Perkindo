@@ -40,7 +40,8 @@ class BerandaController extends Controller
 
     public function isi_berita($slug)
     {
-        return view('umum.galeri.isi-berita', compact('slug'));
+        $isi_berita = Berita::where('slug', $slug)->first();
+        return view('umum.galeri.isi-berita', compact('isi_berita'));
     }
 
 
